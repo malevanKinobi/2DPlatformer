@@ -55,7 +55,8 @@ namespace Scripts
         private void FixedUpdate()
         {
             var xVelocity = _direction.x * _speed;
-            var yVelocity = CalculateYVelocity();            
+            var yVelocity = CalculateYVelocity();    
+            
             _rigidbody.velocity = new Vector2(xVelocity, yVelocity);
 
             UpdateSpriteDirection();
@@ -65,7 +66,10 @@ namespace Scripts
         {
             _isGrounded = IsGrounded();
 
-            _animator.SetBool(IsRunning, _rigidbody.velocity.x != 0);
+            if (_direction.y == 0)
+                print(_direction);
+                _animator.SetBool(IsRunning, _rigidbody.velocity.x != 0);
+
             _animator.SetBool(IsGroundKey, _isGrounded);
             _animator.SetFloat(VerticalVelocity, _rigidbody.velocity.y);
         }
