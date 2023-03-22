@@ -170,7 +170,19 @@ namespace Scripts
 
         public void SpawnFootDustCustomParticle(string particleName)
         {
-            _spawnComponent.Spawn(particleName);
+            if (particleName == "FallDust")
+            {
+                var dropHeight = -14f;
+                if ( (_currentCountJump == 0 && _isGrounded) || _rigidbody.velocity.y < dropHeight)
+                {
+                    _spawnComponent.Spawn(particleName);
+                }                    
+            }                
+            else
+            {
+                _spawnComponent.Spawn(particleName);
+            }
+                
         }    
 
         public void SpawnCoinsParticle()
