@@ -32,7 +32,7 @@ namespace Scripts
         [Header("PARTICLE SYSTEM")]
         [SerializeField] private ParticleSystem _particleSystem;
 
-        [SerializeField] private SpawnComponent _spawnComponent;
+        [SerializeField] private SpawnCustomParticleComponent _spawnComponent;
 
         private Vector2 _direction;      
         private bool _isGrounded;
@@ -168,9 +168,9 @@ namespace Scripts
             }
         }
 
-        public void SpawnFootDustCustomParticle()
+        public void SpawnFootDustCustomParticle(string particleName)
         {
-            _spawnComponent.Spawn();
+            _spawnComponent.Spawn(particleName);
         }    
 
         public void SpawnCoinsParticle()
