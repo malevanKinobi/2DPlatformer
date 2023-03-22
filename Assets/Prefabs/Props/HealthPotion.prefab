@@ -1,0 +1,234 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &434595439069071417
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3074393726996401740}
+  - component: {fileID: 8358883066177134373}
+  - component: {fileID: 9174152653454393267}
+  - component: {fileID: 4113157770366124547}
+  - component: {fileID: 7597909273058094592}
+  - component: {fileID: 7472751046474383891}
+  - component: {fileID: 1596251333064104368}
+  m_Layer: 0
+  m_Name: HealthPotion
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3074393726996401740
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 434595439069071417}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 40.25, y: 1.5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &8358883066177134373
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 434595439069071417}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 1
+  m_Sprite: {fileID: 3714227102187029162, guid: 924a39ded09aa4143b0f8acdfe8318f8, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 0.28125, y: 0.4375}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!70 &9174152653454393267
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 434595439069071417}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 0.28125, y: 0.4375}
+  m_Direction: 0
+--- !u!114 &4113157770366124547
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 434595439069071417}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 420331c6856b11441aa6b90536125634, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _tag: Player
+  _action:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1596251333064104368}
+        m_TargetAssemblyTypeName: Scripts.Components.ModifyHealthComponent, Assembly-CSharp
+        m_MethodName: Apply
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 7597909273058094592}
+        m_TargetAssemblyTypeName: Scripts.SpriteAnimation, Assembly-CSharp
+        m_MethodName: SetClip
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: destroy
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &7597909273058094592
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 434595439069071417}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 705445b3e63e010429aaca2525bd026a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _clips:
+  - _name: idle
+    _countFrames: 10
+    _sprites:
+    - {fileID: 3714227102187029162, guid: 924a39ded09aa4143b0f8acdfe8318f8, type: 3}
+    - {fileID: -6202940564662568092, guid: 924a39ded09aa4143b0f8acdfe8318f8, type: 3}
+    - {fileID: -8747976068718324687, guid: 924a39ded09aa4143b0f8acdfe8318f8, type: 3}
+    - {fileID: 7142050841817600938, guid: 924a39ded09aa4143b0f8acdfe8318f8, type: 3}
+    - {fileID: -860807820763296739, guid: 924a39ded09aa4143b0f8acdfe8318f8, type: 3}
+    - {fileID: -5249288142952506341, guid: 924a39ded09aa4143b0f8acdfe8318f8, type: 3}
+    - {fileID: 1089735312403315716, guid: 924a39ded09aa4143b0f8acdfe8318f8, type: 3}
+    _loop: 1
+    _allowNextClip: 0
+    _eventOnCompletion:
+      m_PersistentCalls:
+        m_Calls: []
+  - _name: destroy
+    _countFrames: 20
+    _sprites:
+    - {fileID: 6040734443530017722, guid: 924a39ded09aa4143b0f8acdfe8318f8, type: 3}
+    - {fileID: 8167133005111728920, guid: 924a39ded09aa4143b0f8acdfe8318f8, type: 3}
+    - {fileID: 2014349484240403859, guid: 924a39ded09aa4143b0f8acdfe8318f8, type: 3}
+    - {fileID: 6326803469982491369, guid: 924a39ded09aa4143b0f8acdfe8318f8, type: 3}
+    - {fileID: 6519628818910804322, guid: 924a39ded09aa4143b0f8acdfe8318f8, type: 3}
+    - {fileID: -7293215197781682108, guid: 924a39ded09aa4143b0f8acdfe8318f8, type: 3}
+    - {fileID: -8747828868849804721, guid: 924a39ded09aa4143b0f8acdfe8318f8, type: 3}
+    - {fileID: -4827988376881342917, guid: 924a39ded09aa4143b0f8acdfe8318f8, type: 3}
+    - {fileID: 1152693816632332367, guid: 924a39ded09aa4143b0f8acdfe8318f8, type: 3}
+    - {fileID: -4281154887353889082, guid: 924a39ded09aa4143b0f8acdfe8318f8, type: 3}
+    - {fileID: 7505194234833031526, guid: 924a39ded09aa4143b0f8acdfe8318f8, type: 3}
+    - {fileID: 5533858432813650269, guid: 924a39ded09aa4143b0f8acdfe8318f8, type: 3}
+    - {fileID: 7741721744188925002, guid: 924a39ded09aa4143b0f8acdfe8318f8, type: 3}
+    _loop: 0
+    _allowNextClip: 0
+    _eventOnCompletion:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 7472751046474383891}
+          m_TargetAssemblyTypeName: Scripts.Components.DestroyObjectComponent, Assembly-CSharp
+          m_MethodName: DestroyObject
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+--- !u!114 &7472751046474383891
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 434595439069071417}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fc1aa50493b08944b66c506a53af0ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _destroyObject: {fileID: 434595439069071417}
+--- !u!114 &1596251333064104368
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 434595439069071417}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29833dde6488a7144bbd9d3eaeff0e71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _modifyValue: 5
