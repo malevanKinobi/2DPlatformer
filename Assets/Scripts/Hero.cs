@@ -58,16 +58,16 @@ namespace Scripts
             var yVelocity = CalculateYVelocity();            
             _rigidbody.velocity = new Vector2(xVelocity, yVelocity);
 
-            _animator.SetBool(IsRunning, _rigidbody.velocity.x != 0);
-            _animator.SetBool(IsGroundKey, _isGrounded);
-            _animator.SetFloat(VerticalVelocity, _rigidbody.velocity.y);
-
             UpdateSpriteDirection();
         }
 
         private void Update()
         {
             _isGrounded = IsGrounded();
+
+            _animator.SetBool(IsRunning, _rigidbody.velocity.x != 0);
+            _animator.SetBool(IsGroundKey, _isGrounded);
+            _animator.SetFloat(VerticalVelocity, _rigidbody.velocity.y);
         }
 
         public void SetDirection(Vector2 direction)
